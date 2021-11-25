@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import postRoutes from "./routes/posts.js";
+import kananRoutes from "./routes/kanan.js";
 
 const app = express();
 
@@ -9,6 +10,8 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/posts", postRoutes);
+app.use("/kanan", kananRoutes);
+
 app.get("/", (req, res) => {
   res.send("Hello from Kanan");
 });
