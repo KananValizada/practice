@@ -1,7 +1,8 @@
 import React from "react";
+import KananForm from "./Form/Form";
 
 const App = () => {
-  return <div>App</div>;
+  return <KananForm />;
 };
 
 export default App;
